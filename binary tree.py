@@ -40,6 +40,16 @@ class binarytree():
 
             self.printTree(node.right)
 
+    def search(self,val):
+        current=self.root
+        while(current is not None):
+            if(current.value==val):
+                return current
+            else:
+                if(current.value>val):
+                    current=current.left
+                if(current.value<val):
+                    current=current.right
 
 tree=binarytree()
 tree.insert(3)
@@ -49,4 +59,5 @@ tree.insert(7)
 tree.insert(9)
 tree.insert(2)
 tree.insert(6)
+x=tree.search(5)
 tree.printTree(tree.root)
