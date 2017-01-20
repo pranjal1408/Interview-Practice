@@ -6,7 +6,7 @@ def pallperm(str):
             counts[i]+=1
         else:
             counts[i]=1
-    print counts
+    #print counts
     even_counts=0
     odd_counts=0
     for i in counts.keys():
@@ -15,11 +15,11 @@ def pallperm(str):
                 even_counts+=1
             elif counts[i]%2==1:
                 odd_counts+=1
-    print even_counts, odd_counts
+    #print even_counts, odd_counts
     if(odd_counts>1):
         return False
     else:
         return True
 
-x=pallperm("Tacct Coa")
+x=pallperm("Tact Coa")
 print x
